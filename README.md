@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# WebScrapper React App
 
-In the project directory, you can run:
+WebScrapper is a simple web application built with React that allows users to scrape the HTML content of any public web page and download the result as a text file. The app features a clean UI, dark/light mode toggle, and error handling for invalid or failed requests.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **URL Scraping**: Enter any valid URL and fetch the HTML content using the Zenscrape API (with a demo API key).
+- **Download Result**: Download the scraped HTML as a `.txt` file with a single click.
+- **Dark/Light Mode**: Toggle between dark and light themes for better accessibility.
+- **Responsive UI**: Built with Bootstrap for a responsive and modern look.
+- **Error Handling**: User-friendly error messages for invalid URLs or failed requests.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## How It Works
 
-### `npm test`
+1. Enter a URL in the input field and click the "scrap" button.
+2. The app sends a request to the Zenscrape API (via a CORS proxy) to fetch the HTML content of the page.
+3. If successful, a "download" button appears. Click it to download the HTML as a text file.
+4. Toggle between dark and light mode using the button at the top right.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React (Class Components)
+- Axios (for HTTP requests)
+- Bootstrap (for styling)
+- Custom download.js utility (for file download)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- `src/App.js` — Main React component with UI, state, and logic for scraping and downloading.
+- `src/downloadjs/download.js` — Utility for cross-browser file downloads.
+- `public/index.html` — HTML template, includes external scripts and icons.
+- `src/App.css` — Custom styles for the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup & Installation
 
-### `npm run eject`
+1. **Clone the repository:**
+	```bash
+	git clone <repo-url>
+	cd webscrapper
+	```
+2. **Install dependencies:**
+	```bash
+	npm install
+	```
+3. **Start the development server:**
+	```bash
+	npm start
+	```
+	The app will be available at [http://localhost:3000](http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Enter a valid URL (e.g., `https://example.com`).
+2. Click "scrap" to fetch the HTML content.
+3. If successful, click "download" to save the HTML as a `.txt` file.
+4. Use the dark/light mode toggle for your preferred theme.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Notes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- The app uses a demo API key for Zenscrape. For production use, obtain your own API key from [zenscrape.com](https://www.zenscrape.com/).
+- The CORS proxy (`https://cors-anywhere.herokuapp.com/`) is used for development/demo purposes and may have rate limits.
+- The download functionality is powered by a custom `download.js` utility for maximum browser compatibility.
 
-## Learn More
+## Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm start` — Run the app in development mode.
+- `npm run build` — Build the app for production.
+- `npm test` — Run tests.
+- `npm run eject` — Eject configuration (not recommended unless necessary).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
