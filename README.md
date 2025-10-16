@@ -33,6 +33,14 @@ The application is built using the following technologies:
 - URL validation before submission
 - Fully responsive design for all screen sizes
 
+## Screenshots
+
+### Light Mode
+![Web Scraper Light Mode](https://github.com/user-attachments/assets/5a0af40a-0b93-4feb-adbc-9126835338b7)
+
+### Dark Mode
+![Web Scraper Dark Mode](https://github.com/user-attachments/assets/4eadb130-4b27-4333-8f67-7674758bcda5)
+
 ## Project Structure
 
 The project follows a standard Create React App structure:
@@ -138,7 +146,15 @@ The deployment process automatically builds the application and pushes it to the
 
 ### Live Demo
 
-Visit the live application at: [https://pappater.github.io/webscrapper](https://pappater.github.io/webscrapper)
+The application is ready for deployment. After merging this PR, run the following command to deploy:
+
+```bash
+npm run deploy
+```
+
+The application will then be available at: [https://pappater.github.io/webscrapper](https://pappater.github.io/webscrapper)
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## API Configuration
 
